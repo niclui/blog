@@ -4,21 +4,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Building an image classifier with fast.ai | A novice’s adventure into AI</title>
+<title>Building an image classifier with fast.ai | An adventure into AI</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Building an image classifier with fast.ai" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Awesome summary" />
 <meta property="og:description" content="Awesome summary" />
-<link rel="canonical" href="https://nicholaslui97.github.io/blog/fastpages/jupyter/2021/08/28/orange.html" />
-<meta property="og:url" content="https://nicholaslui97.github.io/blog/fastpages/jupyter/2021/08/28/orange.html" />
-<meta property="og:site_name" content="A novice’s adventure into AI" />
+<link rel="canonical" href="https://nicholaslui97.github.io/fastpages/jupyter/2021/08/28/orange.html" />
+<meta property="og:url" content="https://nicholaslui97.github.io/fastpages/jupyter/2021/08/28/orange.html" />
+<meta property="og:site_name" content="An adventure into AI" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-08-28T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2021-08-28T00:00:00-05:00","url":"https://nicholaslui97.github.io/blog/fastpages/jupyter/2021/08/28/orange.html","@type":"BlogPosting","headline":"Building an image classifier with fast.ai","dateModified":"2021-08-28T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://nicholaslui97.github.io/blog/fastpages/jupyter/2021/08/28/orange.html"},"description":"Awesome summary","@context":"https://schema.org"}</script>
+{"datePublished":"2021-08-28T00:00:00-05:00","url":"https://nicholaslui97.github.io/fastpages/jupyter/2021/08/28/orange.html","@type":"BlogPosting","headline":"Building an image classifier with fast.ai","dateModified":"2021-08-28T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://nicholaslui97.github.io/fastpages/jupyter/2021/08/28/orange.html"},"description":"Awesome summary","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nicholaslui97.github.io/blog/feed.xml" title="A novice's adventure into AI" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nicholaslui97.github.io/feed.xml" title="An adventure into AI" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-57531313-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-57531313-5');
+</script>
+
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
 <script>
@@ -53,7 +68,7 @@ window.onload = wrap_img;
 </head>
 <body><header class="site-header">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">A novice&#39;s adventure into AI</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/">An adventure into AI</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -63,7 +78,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/blog/about/">About</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -84,10 +99,10 @@ window.onload = wrap_img;
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
-        <a class="category-tags-link" href="/blog/categories/#fastpages">fastpages</a>
+        <a class="category-tags-link" href="/categories/#fastpages">fastpages</a>
         &nbsp;
       
-        <a class="category-tags-link" href="/blog/categories/#jupyter">jupyter</a>
+        <a class="category-tags-link" href="/categories/#jupyter">jupyter</a>
         
       
       </p>
@@ -99,19 +114,19 @@ window.onload = wrap_img;
           <div class="px-2">
 
     <a href="https://github.com/nicholaslui97/blog/tree/master/_notebooks/2021-08-28-orange.ipynb" role="button" target="_blank">
-<img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
+<img class="notebook-badge-image" src="/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
     <a href="https://mybinder.org/v2/gh/nicholaslui97/blog/master?filepath=_notebooks%2F2021-08-28-orange.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
+        <img class="notebook-badge-image" src="/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
     <a href="https://colab.research.google.com/github/nicholaslui97/blog/blob/master/_notebooks/2021-08-28-orange.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
+        <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
         </div>
@@ -774,10 +789,10 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /pytorch/aten/src/ATen/na
 
 
 
-<div id="0654a814-1fde-4801-a4c6-4e04cea3f48e"></div>
+<div id="ae8c82b2-cf99-4010-851e-5130ee95746f"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#0654a814-1fde-4801-a4c6-4e04cea3f48e');
+var element = $('#ae8c82b2-cf99-4010-851e-5130ee95746f');
 
     async function download(id, filename, size) {
       if (!google.colab.kernel.accessAllowed) {
@@ -829,10 +844,10 @@ var element = $('#0654a814-1fde-4801-a4c6-4e04cea3f48e');
 
 
 
-<div id="04edb491-15c6-4d2e-baff-f14af0a80bde"></div>
+<div id="a7a47485-67e3-4d91-a01b-940c222ba68e"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#04edb491-15c6-4d2e-baff-f14af0a80bde');
+var element = $('#a7a47485-67e3-4d91-a01b-940c222ba68e');
 download("download_dc86be0a-b2af-4448-a851-d90213b91387", "export.pkl", 47312801)
 </script>
 </div>
@@ -1233,10 +1248,10 @@ download("download_dc86be0a-b2af-4448-a851-d90213b91387", "export.pkl", 47312801
 
 
 
-<div id="6c60e9ba-5481-4d04-939e-e93c8b61f36a"></div>
+<div id="aa057aec-0a67-4bc4-a300-f0f33aae3978"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#6c60e9ba-5481-4d04-939e-e93c8b61f36a');
+var element = $('#aa057aec-0a67-4bc4-a300-f0f33aae3978');
 
     async function download(id, filename, size) {
       if (!google.colab.kernel.accessAllowed) {
@@ -1288,10 +1303,10 @@ var element = $('#6c60e9ba-5481-4d04-939e-e93c8b61f36a');
 
 
 
-<div id="c7ac1d07-ba52-41f2-a2f9-f5dee13f9a4f"></div>
+<div id="aafda841-0704-45d6-bda7-57a761f5083f"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#c7ac1d07-ba52-41f2-a2f9-f5dee13f9a4f');
+var element = $('#aafda841-0704-45d6-bda7-57a761f5083f');
 download("download_3a0594ad-b801-4ffd-afdb-f41f1c421194", "submission.csv", 317195)
 </script>
 </div>
@@ -1331,30 +1346,30 @@ download("download_3a0594ad-b801-4ffd-afdb-f41f1c421194", "submission.csv", 3171
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/blog/fastpages/jupyter/2021/08/28/orange.html" hidden></a>
+</script><a class="u-url" href="/fastpages/jupyter/2021/08/28/orange.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
-  <data class="u-url" href="/blog/"></data>
+  <data class="u-url" href="/"></data>
 
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="/blog/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
-              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>
           </a>
         </p>
       </div>
       <div class="footer-col">
-        <p>A blog on some useful ideas in AI and deep learning. Hope you enjoy reading!</p>
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"></ul>
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
 </div>
 
   </div>

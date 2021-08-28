@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://nicholaslui97.github.io/blog/markdown/2020/01/14/test-markdown-post.html</loc>
+<loc>https://nicholaslui97.github.io/markdown/2020/01/14/test-markdown-post.html</loc>
 <lastmod>2020-01-14T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://nicholaslui97.github.io/blog/jupyter/2020/02/20/test.html</loc>
+<loc>https://nicholaslui97.github.io/jupyter/2020/02/20/test.html</loc>
 <lastmod>2020-02-20T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://nicholaslui97.github.io/blog/fastpages/jupyter/2021/08/28/orange.html</loc>
+<loc>https://nicholaslui97.github.io/fastpages/jupyter/2021/08/28/orange.html</loc>
 <lastmod>2021-08-28T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://nicholaslui97.github.io/blog/about/</loc>
+<loc>https://nicholaslui97.github.io/about/</loc>
 </url>
 <url>
-<loc>https://nicholaslui97.github.io/blog/</loc>
+<loc>https://nicholaslui97.github.io/</loc>
 </url>
 <url>
-<loc>https://nicholaslui97.github.io/blog/search/</loc>
+<loc>https://nicholaslui97.github.io/search/</loc>
 </url>
 <url>
-<loc>https://nicholaslui97.github.io/blog/categories/</loc>
+<loc>https://nicholaslui97.github.io/categories/</loc>
 </url>
 </urlset>
