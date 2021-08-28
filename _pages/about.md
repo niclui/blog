@@ -1,3 +1,9 @@
+---
+layout: default
+permalink: /about/
+title: About me
+---
+
 # About
 
 Thank you for visiting! I am Nicholas, a Statistics MS student and <a href="https://knight-hennessy.stanford.edu/program/scholars/2021/nicholas-lui" title="Knight-Hennessy Scholar">Knight-Hennessy Scholar</a> at Stanford University. Previously, I worked at the Singapore government's <a href="https://www.tech.gov.sg/capability-centre-dsaid">Data Science & AI unit</a>, and on machine learning projects at <a href="https://go.travelstart.com/lp/about-us">Travelstart</a>. I also helped formulate product strategy at ByteDance as the first intern (and sixth employee) of its <a href="https://www.byteplus.com/">Global B2B division</a>.
