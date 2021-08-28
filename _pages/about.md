@@ -1,8 +1,7 @@
 ---
 layout: default
-permalink: /about/
 title: About
-search_exclude: true
+permalink: /about/
 ---
 
 # About me
