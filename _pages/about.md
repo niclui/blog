@@ -2,6 +2,7 @@
 layout: default
 permalink: /about/
 title: About me
+search_exclude: true
 ---
 
 # About
